@@ -17,7 +17,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           inlineScript: |
-            cp $GITHUB_WORKSPACE/config /root/.kube/config
+            cd bestrepo
+            cp config /root/.kube/config
             cat /root/.kube/config
           
       - name: Login to Azure
