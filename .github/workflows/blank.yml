@@ -18,6 +18,7 @@ jobs:
         with:
           inlineScript: |
             cp $GITHUB_WORKSPACE/config /root/.kube/config
+            cat /root/.kube/config
           
       - name: Login to Azure
         uses: azure/login@v1
