@@ -22,6 +22,7 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
+            \rm -rf ~/.kube/config
             az login --service-principal --username 579cde86-9000-4c54-96b0-48160ba18b24 --password OuO8Q~azZFfgX5ofLlCXMyEqg_qXqWrVY36ykbAC  --tenant 9721c5ac-f796-419a-bd16-2ee99a4332eb
             az aks get-credentials --resource-group rg-aks-003 --name aks-003
             wget https://github.com/Azure/kubelogin/releases/download/v0.0.20/kubelogin-linux-amd64.zip
