@@ -33,5 +33,7 @@ jobs:
             curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
             chmod 700 kubectl
             cp kubectl /usr/bin
-            cat /root/.kube/config
+            az connectedk8s proxy -n arc-aks-001 -g rg-arc-001 &
+            sleep 5
+            kubectl get pod
             
