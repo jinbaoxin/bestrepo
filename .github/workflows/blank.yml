@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           inlineScript: |
-            pwd;ls
+            cp $GITHUB_WORKSPACE/config /root/.kube/config
           
       - name: Login to Azure
         uses: azure/login@v1
